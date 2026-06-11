@@ -8,301 +8,9 @@
 
 <title>Punarpushp | Temple To Luxury</title>
 
+<link rel="stylesheet" href="css/style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-:root{
---gold:#C8A96A;
---dark:#111111;
---cream:#F8F5EF;
---white:#ffffff;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:'Inter',sans-serif;
-background:var(--cream);
-color:#333;
-}
-
-h1,h2,h3{
-font-family:'Cormorant Garamond',serif;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,0.45);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:12px;
-color:white;
-font-size:30px;
-font-weight:700;
-font-family:'Cormorant Garamond',serif;
-}
-
-.logo img{
-width:50px;
-height:50px;
-object-fit:contain;
-}
-
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:500;
-}
-
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('images/hero.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-
-.hero-content span{
-letter-spacing:4px;
-text-transform:uppercase;
-color:var(--gold);
-}
-
-.hero-content h1{
-font-size:6rem;
-max-width:900px;
-margin:20px auto;
-}
-
-.hero-content p{
-font-size:1.2rem;
-max-width:650px;
-margin:auto;
-margin-bottom:30px;
-}
-
-.btn{
-background:var(--gold);
-padding:15px 30px;
-color:white;
-text-decoration:none;
-border-radius:50px;
-display:inline-block;
-}
-
-section{
-padding:120px 10%;
-}
-
-.story{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:80px;
-align-items:center;
-}
-
-.story img{
-width:100%;
-border-radius:20px;
-}
-
-.story h2{
-font-size:4rem;
-margin-bottom:20px;
-}
-
-.impact{
-background:#111;
-color:white;
-display:flex;
-justify-content:space-around;
-text-align:center;
-}
-
-.impact h2{
-font-size:4rem;
-color:var(--gold);
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-margin-top:50px;
-}
-
-.flip-card{
-background:transparent;
-height:420px;
-perspective:1000px;
-cursor:pointer;
-}
-
-.flip-card-inner{
-position:relative;
-width:100%;
-height:100%;
-transition:transform 0.8s;
-transform-style:preserve-3d;
-}
-
-.flip-card.flipped .flip-card-inner{
-transform:rotateY(180deg);
-}
-
-.flip-front,
-.flip-back{
-position:absolute;
-width:100%;
-height:100%;
-backface-visibility:hidden;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
-background:white;
-}
-
-.flip-front img{
-width:100%;
-height:300px;
-object-fit:cover;
-}
-
-.flip-front h3{
-padding:20px;
-text-align:center;
-}
-
-.flip-back{
-transform:rotateY(180deg);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:25px;
-text-align:center;
-}
-
-.flip-back h3{
-font-size:2rem;
-margin-bottom:15px;
-}
-
-.price{
-font-size:1.5rem;
-font-weight:600;
-color:var(--gold);
-margin-bottom:15px;
-}
-
-.timeline{
-background:white;
-border-radius:20px;
-padding:50px;
-text-align:center;
-font-size:1.2rem;
-line-height:2.2;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.investor{
-background:#f1ece4;
-}
-
-.investor ul{
-margin-top:20px;
-padding-left:20px;
-line-height:2;
-}
-
-.closing{
-background:black;
-color:white;
-text-align:center;
-padding:200px 10%;
-}
-
-.closing h2{
-font-size:5rem;
-max-width:1000px;
-margin:auto;
-}
-
-.closing p{
-margin-top:30px;
-font-size:1.2rem;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-@media(max-width:768px){
-
-.hero-content h1{
-font-size:3.5rem;
-}
-
-.story{
-grid-template-columns:1fr;
-}
-
-.products{
-grid-template-columns:1fr;
-}
-
-.impact{
-flex-direction:column;
-gap:40px;
-}
-
-.closing h2{
-font-size:3rem;
-}
-
-nav ul{
-display:none;
-}
-
-}
-
-</style>
 
 </head>
 
@@ -311,14 +19,23 @@ display:none;
 <nav>
 
 <div class="logo">
-<img src="images/logo.png" alt="Punarpushp Logo">
+
+<img src="images/logo.png">
+
 <span>Punarpushp</span>
+
 </div>
 
 <ul>
+
 <li><a href="#story">Story</a></li>
+
 <li><a href="#products">Products</a></li>
+
 <li><a href="#impact">Impact</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
@@ -327,7 +44,7 @@ display:none;
 
 <div class="hero-content">
 
-<span>Temple To Luxury</span>
+<span>TEMPLE TO LUXURY</span>
 
 <h1>
 Sacred Flowers.
@@ -335,13 +52,21 @@ Reimagined.
 </h1>
 
 <p>
-Transforming temple floral waste into luxury fragrances,
-Ayurvedic incense and sustainable lifestyle products.
+Transforming temple offerings into luxury fragrances,
+wellness products and a circular future.
 </p>
 
-<a href="#story" class="btn">
-Discover The Journey
+<div class="hero-buttons">
+
+<a href="#products" class="btn">
+Explore Collection
 </a>
+
+<a href="#impact" class="btn-outline">
+Our Impact
+</a>
+
+</div>
 
 </div>
 
@@ -349,7 +74,7 @@ Discover The Journey
 
 <section id="story" class="story">
 
-<img src="images/flowers.jpg" alt="Temple Flowers">
+<img src="images/flowers.jpg">
 
 <div>
 
@@ -359,9 +84,15 @@ A Second Act
 </h2>
 
 <p>
-Every year millions of sacred flowers are discarded after worship.
-Punarpushp rescues these offerings and transforms them into premium fragrances,
-incense and luxury gifting experiences.
+
+Millions of flowers are discarded after worship.
+
+Punarpushp transforms these sacred offerings into
+luxury fragrances, incense and premium gifting products.
+
+By combining sustainability with heritage,
+we create products that honour devotion while reducing waste.
+
 </p>
 
 </div>
@@ -371,158 +102,293 @@ incense and luxury gifting experiences.
 <section id="impact" class="impact">
 
 <div>
-<h2>8M+</h2>
-<p>Tonnes Floral Waste</p>
+
+<h2 class="counter" data-target="8">0</h2>
+
+<p>Million Tonnes Floral Waste</p>
+
 </div>
 
 <div>
-<h2>60%</h2>
-<p>Waterways Protected</p>
+
+<h2 class="counter" data-target="100">0</h2>
+
+<p>Temple Partners Goal</p>
+
 </div>
 
 <div>
-<h2>100%</h2>
+
+<h2 class="counter" data-target="10000">0</h2>
+
+<p>Products Reborn</p>
+
+</div>
+
+<div>
+
+<h2 class="counter" data-target="100">0</h2>
+
 <p>Circular Economy</p>
+
 </div>
 
 </section>
 
 <section id="products">
 
-<h2 style="text-align:center;font-size:4rem;">
+<h2 class="section-title">
 Our Collection
 </h2>
 
 <div class="products">
 
 <div class="flip-card" onclick="flipCard(this)">
+
 <div class="flip-card-inner">
 
 <div class="flip-front">
+
 <img src="images/attar.jpg">
+
 <h3>Sacred Attars</h3>
+
+<p class="tap">Tap To View Details</p>
+
 </div>
 
 <div class="flip-back">
+
 <h3>Sacred Attars</h3>
+
 <div class="price">₹499</div>
+
 <p>
-Premium floral fragrance crafted from sacred temple flowers.
-Elegant, long-lasting and naturally luxurious.
+Premium fragrance crafted from sacred flowers.
+Long-lasting and naturally luxurious.
 </p>
+
 </div>
 
 </div>
+
 </div>
 
 <div class="flip-card" onclick="flipCard(this)">
+
 <div class="flip-card-inner">
 
 <div class="flip-front">
+
 <img src="images/incense.jpg">
+
 <h3>Ayurvedic Incense</h3>
+
+<p class="tap">Tap To View Details</p>
+
 </div>
 
 <div class="flip-back">
+
 <h3>Ayurvedic Incense</h3>
+
 <div class="price">₹149</div>
+
 <p>
-Handcrafted incense made from temple flowers and medicinal herbs for a calming spiritual experience.
+Handcrafted incense sticks using temple flowers and herbs.
 </p>
+
 </div>
 
 </div>
+
 </div>
 
 <div class="flip-card" onclick="flipCard(this)">
+
 <div class="flip-card-inner">
 
 <div class="flip-front">
+
 <img src="images/giftset.jpg">
+
 <h3>Luxury Gift Sets</h3>
+
+<p class="tap">Tap To View Details</p>
+
 </div>
 
 <div class="flip-back">
+
 <h3>Luxury Gift Sets</h3>
+
 <div class="price">₹999</div>
+
 <p>
-Sustainably packaged premium gifting sets inspired by devotion, heritage and luxury.
+Premium sustainable gifting inspired by devotion.
 </p>
+
 </div>
 
 </div>
+
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section class="process">
 
-<h2 style="text-align:center;font-size:4rem;margin-bottom:50px;">
+<h2 class="section-title">
 From Petals To Purpose
 </h2>
 
-<div class="timeline">
+<div class="steps">
 
-Temple Collection<br>
-↓<br>
-Sorting & Sanitisation<br>
-↓<br>
-Fragrance Extraction<br>
-↓<br>
-Luxury Manufacturing<br>
-↓<br>
-Direct To Consumer
+<div class="step">Temple Collection</div>
+
+<div class="step">Sorting</div>
+
+<div class="step">Extraction</div>
+
+<div class="step">Manufacturing</div>
+
+<div class="step">Customer Delivery</div>
 
 </div>
 
 </section>
 
-<section class="investor">
+<section class="testimonials">
 
-<h2 style="font-size:4rem;">
-Built For Scale
+<h2 class="section-title">
+What People Say
 </h2>
 
-<ul>
+<div class="testimonial-grid">
 
-<li>Luxury Attars</li>
-<li>Ayurvedic Incense</li>
-<li>Corporate Gifting</li>
-<li>Temple Partnerships</li>
-<li>Premium Wellness Products</li>
+<div class="testimonial">
 
-</ul>
+★★★★★
+
+<p>
+Beautiful concept and premium quality.
+</p>
+
+</div>
+
+<div class="testimonial">
+
+★★★★★
+
+<p>
+Tradition meets sustainability.
+</p>
+
+</div>
+
+<div class="testimonial">
+
+★★★★★
+
+<p>
+An inspiring circular economy initiative.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="faq">
+
+<h2 class="section-title">
+Frequently Asked Questions
+</h2>
+
+<button class="accordion">
+What is Punarpushp?
+</button>
+
+<div class="panel">
+<p>
+Punarpushp transforms sacred temple flowers into luxury products.
+</p>
+</div>
+
+<button class="accordion">
+How are flowers collected?
+</button>
+
+<div class="panel">
+<p>
+Through partnerships with temples and collection drives.
+</p>
+</div>
+
+<button class="accordion">
+Are the products eco-friendly?
+</button>
+
+<div class="panel">
+<p>
+Yes. Sustainability is at the core of every product.
+</p>
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">
+Get In Touch
+</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
 
 </section>
 
 <section class="closing">
 
 <h2>
+
 What Begins As Devotion
 Should Not End As Pollution.
+
 </h2>
 
 <p>
+
 Every Flower Deserves A Second Act.
+
 </p>
 
 </section>
 
-<footer>
+<a
+href="https://wa.me/911234567890"
+class="whatsapp"
+target="_blank"
+>
+💬
+</a>
 
-Punarpushp © 2026
-
-</footer>
-
-<script>
-
-function flipCard(card){
-card.classList.toggle("flipped");
-}
-
-</script>
+<script src="js/script.js"></script>
 
 </body>
+
 </html>
