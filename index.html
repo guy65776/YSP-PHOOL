@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RE-BORN | Temple To Luxury</title>
+<title>Punarpushp | Temple To Luxury</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -43,19 +43,29 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-padding:25px 8%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.4);
+background:rgba(0,0,0,0.45);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
 
 .logo{
+display:flex;
+align-items:center;
+gap:12px;
 color:white;
 font-size:30px;
 font-weight:700;
+font-family:'Cormorant Garamond',serif;
+}
+
+.logo img{
+width:50px;
+height:50px;
+object-fit:contain;
 }
 
 nav ul{
@@ -67,6 +77,7 @@ list-style:none;
 nav a{
 color:white;
 text-decoration:none;
+font-weight:500;
 }
 
 .hero{
@@ -85,7 +96,7 @@ padding:20px;
 }
 
 .hero-content span{
-letter-spacing:3px;
+letter-spacing:4px;
 text-transform:uppercase;
 color:var(--gold);
 }
@@ -109,6 +120,7 @@ padding:15px 30px;
 color:white;
 text-decoration:none;
 border-radius:50px;
+display:inline-block;
 }
 
 section{
@@ -152,22 +164,68 @@ gap:40px;
 margin-top:50px;
 }
 
-.card{
-background:white;
+.flip-card{
+background:transparent;
+height:420px;
+perspective:1000px;
+cursor:pointer;
+}
+
+.flip-card-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform 0.8s;
+transform-style:preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner{
+transform:rotateY(180deg);
+}
+
+.flip-front,
+.flip-back{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 10px 30px rgba(0,0,0,.1);
+background:white;
 }
 
-.card img{
+.flip-front img{
 width:100%;
 height:300px;
 object-fit:cover;
 }
 
-.card h3{
+.flip-front h3{
 padding:20px;
 text-align:center;
+}
+
+.flip-back{
+transform:rotateY(180deg);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:25px;
+text-align:center;
+}
+
+.flip-back h3{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.price{
+font-size:1.5rem;
+font-weight:600;
+color:var(--gold);
+margin-bottom:15px;
 }
 
 .timeline{
@@ -176,7 +234,8 @@ border-radius:20px;
 padding:50px;
 text-align:center;
 font-size:1.2rem;
-line-height:2;
+line-height:2.2;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 .investor{
@@ -186,6 +245,7 @@ background:#f1ece4;
 .investor ul{
 margin-top:20px;
 padding-left:20px;
+line-height:2;
 }
 
 .closing{
@@ -236,6 +296,10 @@ gap:40px;
 font-size:3rem;
 }
 
+nav ul{
+display:none;
+}
+
 }
 
 </style>
@@ -246,7 +310,10 @@ font-size:3rem;
 
 <nav>
 
-<div class="logo">RE-BORN</div>
+<div class="logo">
+<img src="images/logo.png" alt="Punarpushp Logo">
+<span>Punarpushp</span>
+</div>
 
 <ul>
 <li><a href="#story">Story</a></li>
@@ -282,7 +349,7 @@ Discover The Journey
 
 <section id="story" class="story">
 
-<img src="images/flowers.jpg">
+<img src="images/flowers.jpg" alt="Temple Flowers">
 
 <div>
 
@@ -293,7 +360,7 @@ A Second Act
 
 <p>
 Every year millions of sacred flowers are discarded after worship.
-RE-BORN rescues these offerings and transforms them into premium fragrances,
+Punarpushp rescues these offerings and transforms them into premium fragrances,
 incense and luxury gifting experiences.
 </p>
 
@@ -328,19 +395,62 @@ Our Collection
 
 <div class="products">
 
-<div class="card">
+<div class="flip-card" onclick="flipCard(this)">
+<div class="flip-card-inner">
+
+<div class="flip-front">
 <img src="images/attar.jpg">
 <h3>Sacred Attars</h3>
 </div>
 
-<div class="card">
+<div class="flip-back">
+<h3>Sacred Attars</h3>
+<div class="price">₹499</div>
+<p>
+Premium floral fragrance crafted from sacred temple flowers.
+Elegant, long-lasting and naturally luxurious.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="flip-card" onclick="flipCard(this)">
+<div class="flip-card-inner">
+
+<div class="flip-front">
 <img src="images/incense.jpg">
 <h3>Ayurvedic Incense</h3>
 </div>
 
-<div class="card">
+<div class="flip-back">
+<h3>Ayurvedic Incense</h3>
+<div class="price">₹149</div>
+<p>
+Handcrafted incense made from temple flowers and medicinal herbs for a calming spiritual experience.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="flip-card" onclick="flipCard(this)">
+<div class="flip-card-inner">
+
+<div class="flip-front">
 <img src="images/giftset.jpg">
 <h3>Luxury Gift Sets</h3>
+</div>
+
+<div class="flip-back">
+<h3>Luxury Gift Sets</h3>
+<div class="price">₹999</div>
+<p>
+Sustainably packaged premium gifting sets inspired by devotion, heritage and luxury.
+</p>
+</div>
+
+</div>
 </div>
 
 </div>
@@ -356,21 +466,13 @@ From Petals To Purpose
 <div class="timeline">
 
 Temple Collection<br>
-
 ↓<br>
-
 Sorting & Sanitisation<br>
-
 ↓<br>
-
 Fragrance Extraction<br>
-
 ↓<br>
-
 Luxury Manufacturing<br>
-
 ↓<br>
-
 Direct To Consumer
 
 </div>
@@ -386,13 +488,9 @@ Built For Scale
 <ul>
 
 <li>Luxury Attars</li>
-
 <li>Ayurvedic Incense</li>
-
 <li>Corporate Gifting</li>
-
 <li>Temple Partnerships</li>
-
 <li>Premium Wellness Products</li>
 
 </ul>
@@ -402,26 +500,29 @@ Built For Scale
 <section class="closing">
 
 <h2>
-
 What Begins As Devotion
 Should Not End As Pollution.
-
 </h2>
 
 <p>
-
 Every Flower Deserves A Second Act.
-
 </p>
 
 </section>
 
 <footer>
 
-RE-BORN © 2026
+Punarpushp © 2026
 
 </footer>
 
-</body>
+<script>
 
+function flipCard(card){
+card.classList.toggle("flipped");
+}
+
+</script>
+
+</body>
 </html>
