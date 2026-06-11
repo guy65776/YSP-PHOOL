@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RE-BORN | Temple To Luxury</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#C8A96A;
+--dark:#111111;
+--cream:#F8F5EF;
+--white:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--cream);
+color:#333;
+}
+
+h1,h2,h3{
+font-family:'Cormorant Garamond',serif;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+color:white;
+font-size:30px;
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('images/hero.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-content span{
+letter-spacing:3px;
+text-transform:uppercase;
+color:var(--gold);
+}
+
+.hero-content h1{
+font-size:6rem;
+max-width:900px;
+margin:20px auto;
+}
+
+.hero-content p{
+font-size:1.2rem;
+max-width:650px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+background:var(--gold);
+padding:15px 30px;
+color:white;
+text-decoration:none;
+border-radius:50px;
+}
+
+section{
+padding:120px 10%;
+}
+
+.story{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+.story img{
+width:100%;
+border-radius:20px;
+}
+
+.story h2{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.impact{
+background:#111;
+color:white;
+display:flex;
+justify-content:space-around;
+text-align:center;
+}
+
+.impact h2{
+font-size:4rem;
+color:var(--gold);
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+margin-top:50px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.card h3{
+padding:20px;
+text-align:center;
+}
+
+.timeline{
+background:white;
+border-radius:20px;
+padding:50px;
+text-align:center;
+font-size:1.2rem;
+line-height:2;
+}
+
+.investor{
+background:#f1ece4;
+}
+
+.investor ul{
+margin-top:20px;
+padding-left:20px;
+}
+
+.closing{
+background:black;
+color:white;
+text-align:center;
+padding:200px 10%;
+}
+
+.closing h2{
+font-size:5rem;
+max-width:1000px;
+margin:auto;
+}
+
+.closing p{
+margin-top:30px;
+font-size:1.2rem;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:3.5rem;
+}
+
+.story{
+grid-template-columns:1fr;
+}
+
+.products{
+grid-template-columns:1fr;
+}
+
+.impact{
+flex-direction:column;
+gap:40px;
+}
+
+.closing h2{
+font-size:3rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">RE-BORN</div>
+
+<ul>
+<li><a href="#story">Story</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#impact">Impact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span>Temple To Luxury</span>
+
+<h1>
+Sacred Flowers.
+Reimagined.
+</h1>
+
+<p>
+Transforming temple floral waste into luxury fragrances,
+Ayurvedic incense and sustainable lifestyle products.
+</p>
+
+<a href="#story" class="btn">
+Discover The Journey
+</a>
+
+</div>
+
+</section>
+
+<section id="story" class="story">
+
+<img src="images/flowers.jpg">
+
+<div>
+
+<h2>
+Every Flower Deserves
+A Second Act
+</h2>
+
+<p>
+Every year millions of sacred flowers are discarded after worship.
+RE-BORN rescues these offerings and transforms them into premium fragrances,
+incense and luxury gifting experiences.
+</p>
+
+</div>
+
+</section>
+
+<section id="impact" class="impact">
+
+<div>
+<h2>8M+</h2>
+<p>Tonnes Floral Waste</p>
+</div>
+
+<div>
+<h2>60%</h2>
+<p>Waterways Protected</p>
+</div>
+
+<div>
+<h2>100%</h2>
+<p>Circular Economy</p>
+</div>
+
+</section>
+
+<section id="products">
+
+<h2 style="text-align:center;font-size:4rem;">
+Our Collection
+</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="images/attar.jpg">
+<h3>Sacred Attars</h3>
+</div>
+
+<div class="card">
+<img src="images/incense.jpg">
+<h3>Ayurvedic Incense</h3>
+</div>
+
+<div class="card">
+<img src="images/giftset.jpg">
+<h3>Luxury Gift Sets</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 style="text-align:center;font-size:4rem;margin-bottom:50px;">
+From Petals To Purpose
+</h2>
+
+<div class="timeline">
+
+Temple Collection<br>
+
+↓<br>
+
+Sorting & Sanitisation<br>
+
+↓<br>
+
+Fragrance Extraction<br>
+
+↓<br>
+
+Luxury Manufacturing<br>
+
+↓<br>
+
+Direct To Consumer
+
+</div>
+
+</section>
+
+<section class="investor">
+
+<h2 style="font-size:4rem;">
+Built For Scale
+</h2>
+
+<ul>
+
+<li>Luxury Attars</li>
+
+<li>Ayurvedic Incense</li>
+
+<li>Corporate Gifting</li>
+
+<li>Temple Partnerships</li>
+
+<li>Premium Wellness Products</li>
+
+</ul>
+
+</section>
+
+<section class="closing">
+
+<h2>
+
+What Begins As Devotion
+Should Not End As Pollution.
+
+</h2>
+
+<p>
+
+Every Flower Deserves A Second Act.
+
+</p>
+
+</section>
+
+<footer>
+
+RE-BORN © 2026
+
+</footer>
+
+</body>
+
+</html>
